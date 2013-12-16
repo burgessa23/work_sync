@@ -1,27 +1,61 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.12), see www.w3.org" />
-		<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
-		<title>
-			Untitled Document
-		</title>
-		<link href="//www.att.com/styles/att/assets3.1.0/css/sandbox-styles.css" rel="stylesheet" type="text/css" />
-		<script src="//www.att.com/styles/att/assets3.1.0/js/jquery.min.js" type="text/javascript"></script>
-		<script src="//www.att.com/styles/att/assets3.1.0/js/global-sandbox.js" type="text/javascript"></script>
-		<script src="//www.att.com/styles/att/assets3.1.0/js/mobileMenuShunt-1.0.js" type="text/javascript"></script>
-	</head>
-	<body>
+<head>
+	<meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.12), see www.w3.org" />
+	<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+	<title>
+		Untitled Document
+	</title>
+	<link href="//www.att.com/styles/att/assets3.1.0/css/sandbox-styles.css" rel="stylesheet" type="text/css" />
+	
+	<style type="text/css" media="screen">
+		.table-striped-vert tbody td:nth-of-type(even), .table-striped-vert thead th:nth-of-type(even) {
+			background-color: #E8F0F4;
+		}
+		.table-striped-vert td {
+			font-size: 16px;
+			text-align:center; 
+			vertical-align:middle;
+			font-weight: 600;
+			padding: 10px;
+		}
+		.table-striped-vert th {
+			font-size: 14px;
+			font-weight: 400;
+			text-align:center; 
+			vertical-align:middle;
+			padding: 15px;
+		}
+		.labelType {
+			font-weight: 400;
+			font-size: 14px;
+		}
+		.toggle-header {
+			height: 50px;
+			line-height: 50px;
+		}
+	</style>
+	<script>
+	function swapPlans () {
+		$('#originalTable').hide();
+		$('#flowTable').show();
+		jQuery('html, body').animate({
+			scrollTop: $('body').offset().top
+		}, 250);
+	}
+	</script>
+</head>
+<body>
 	<div data-role="page" class="container">
-	<header class="row navbar globalNav component header" role="banner" data-role="header" data-backbtn="false">
-		<div class="headerBack"> </div>
-		<div class="navSpans clearfix">
-			<div id="logoHolder"> <a href="/" class="cssIcon-globe" data-transition="slide">at&amp;t home</a> </div>
-		</div>
-		<nav>
-			<div class="mine">tst01.stage.att.com</div>
-			<script type="text/javascript"> 
+		<header class="row navbar globalNav component header" role="banner" data-role="header" data-backbtn="false">
+			<div class="headerBack"> </div>
+			<div class="navSpans clearfix">
+				<div id="logoHolder"> <a href="/" class="cssIcon-globe" data-transition="slide">at&amp;t home</a> </div>
+			</div>
+			<nav>
+				<div class="mine">tst01.stage.att.com</div>
+				<script type="text/javascript"> 
 				// variables needed by the mobile nav and mobile search 
 				// Must point to prod before push.
 				//var mobileMenu_ecomName='tst01.stage.att.com', 
@@ -41,19 +75,160 @@
 	<section class="row main-content">
 		<div class="span12">
 			<div class="page-header">
-				<h1>{{Screen_Title}}</h1>
-				<div class="pull-right">
+				<h1>Optimize your plan</h1>
+				<!-- <div class="pull-right">
 					<p>{{Label:}} <a href="#">{{Link}}</a></p>
-				</div>
+				</div> -->
 			</div>
 			<hr class="hr-large">
 			
-			{{ Content Goes Here }}
-			
 			<div class="content-pad">
-				content inside a <code>.content-pad</code> class provides padding
+				Unite your devices with AT&T Mobile Share to share data between all your devices and enjoy unlimited talk & text
 			</div>
+			<table class="table table-striped-vert table-bordered" id="originalTable">
+				<thead>
+					<tr>
+						<th scope="col">Your 3 month average usage:</th>
+						<th scope="col">Our plan recommendation:</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>3.74 <span class="labelType">GB</span></td>
+						<td>4 <span class="labelType">GB</span></td>
+					</tr>
+					<tr>
+						<td>1,234 <spn class="labelType">MINS</spn></td>
+						<td>Unlimited</td>
+					</tr>
+					<tr>
+						<td>3,450 <span class="labelType">MSGS</span></td>
+						<td>Unlimited</td>
+					</tr>
+					<tr>
+						<td>3 <span class="labelType">DEVICES</span></td>
+						<td>3 <span class="labelType">DEVICES</span></td>
+					</tr>
+					<tr>
+						<td>$184/mo</td>
+						<td><span class="price">$160.00/mo</span></td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="table table-striped-vert table-bordered" id="flowTable" style="display: none;">
+				<thead>
+					<tr>
+						<th scope="col">Your 3 month average usage:</th>
+						<th scope="col">Our plan recommendation:</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>3.74 <span class="labelType">GB</span></td>
+						<td>6 <span class="labelType">GB</span></td>
+					</tr>
+					<tr>
+						<td>1,234 <spn class="labelType">MINS</spn></td>
+						<td>Unlimited</td>
+					</tr>
+					<tr>
+						<td>3,450 <span class="labelType">MSGS</span></td>
+						<td>Unlimited</td>
+					</tr>
+					<tr>
+						<td>3 <span class="labelType">DEVICES</span></td>
+						<td>3 <span class="labelType">DEVICES</span></td>
+					</tr>
+					<tr>
+						<td>$184/mo</td>
+						<td><span class="price">$160.00/mo</span></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="content-pad" style="text-align: center;font-size: 13px;">Save <span class="price">$288/year</span> with this plan</div>
+			<hr/>
+			<div class="row-fluid-nowrap content-pad">
+				<div class="span6">
+					<button class="btn btn-alt btn-large btn-block" type="button">No, thank you</button>
+				</div>
+				<div class="span6">
+					<button class="btn btn-large btn-block" type="button">Select this plan</button>
+				</div>
+			</div>
+			<hr class="hr-small"/>
+			<div class="content-pad">
+				<span style="font-size: 16px">Explore all Mobile Share plans</span><br/><br/>
+				Each plan has unlimited Talk & Text. Prices are based on your current devices and services.
+			</div>
+			<form>
+				<div id="accordion1" class="tabpanel" role="tablist" multiselectable="false">
+					<h3 id="tab1" class="toggle-header accordion" aria-selected="false" aria-controls="panel1" aria-expanded="false" role="tab" tabindex="-1">
+						<i class="cssIcon-toggle-plus">collapsed</i>
+						300MB shared data<span class="price" style="padding-left: 40px;">$110.00/mo.</span>
+					</h3>
+					<div id="panel1" class="accordion" aria-labelledby="tab1" aria-hidden="true" role="tabpanel">
+						<h2 tabindex="0">Lorem ipsum dolor sit</h2>
+						<p>Lorem ipsum dolor sit <a href="#">plurubous unem</a>. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. </p>
+					</div>
 
+					<h3 id="tab2" class="toggle-header accordion" aria-selected="false" aria-controls="panel2" aria-expanded="false" role="tab" tabindex="-1">
+						<i class="cssIcon-toggle-plus">collapsed</i>
+						1GB shared data<span class="price" style="padding-left: 60px;">$120.00/mo.</span>
+					</h3>
+					<div id="panel2" class="accordion" aria-labelledby="tab2" aria-hidden="true" role="tabpanel">
+						<h2 tabindex="0">Lorem ipsum dolor sit</h2>
+						<p>Lorem ipsum dolor sit <a href="#">plurubous unem</a>. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. </p>
+					</div>
+
+					<h3 id="tab3" class="toggle-header accordion" aria-selected="false" aria-controls="panel3" aria-expanded="false" role="tab" tabindex="-1">
+						<i class="cssIcon-toggle-plus">collapsed</i>
+						2GB shared data<span class="price" style="padding-left: 60px;">$140.00/mo.</span>
+					</h3>
+					<div id="panel3" class="accordion" aria-labelledby="tab3" aria-hidden="true" role="tabpanel">
+						<h2 tabindex="0">Lorem ipsum dolor sit</h2>
+						<p>Lorem ipsum dolor sit <a href="#">plurubous unem</a>. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. </p>
+					</div>
+
+					<h3 id="tab4" class="toggle-header accordion recommended" style="background-color: #E8F0F4;" aria-selected="false" aria-controls="panel4" aria-expanded="false" role="tab" tabindex="-1">
+						<i class="cssIcon-toggle-plus">collapsed</i>
+						
+						4GB shared data<sup style="position: absolute;left: 15px;top: 8px;font-size: 11px; color: #6a6a6a">Our recommended plan</sup><span class="price" style="padding-left: 60px;">$160.00/mo.</span>
+					</h3>
+					<div id="panel4" class="accordion" aria-labelledby="tab4" aria-hidden="false" role="tabpanel" style="background-color: #F2F2F2;">
+						<hr/>
+						<p>
+							<table style="width: 100%; font-size: 12px;">
+								<tr>
+									<td style="font-weight: 600;">4GB shared data</td>
+									<td class="pricing-text" style="text-align: right;">$70/mo</td>
+								</tr>
+								<tr>
+									<td>3 smartphone access fees @ $40/mo</td>
+									<td class="pricing-text" style="text-align: right;">$120/mo</td>
+								</tr>
+								<tr>
+									<td class="text-success">Off-contract device savings</td>
+									<td class="text-success" style="text-align: right;">-$15/mo</td>
+								</tr>
+								<tr>
+									<td class="text-success">AT&T Next device savings</td>
+									<td class="text-success" style="text-align: right;">-$15/mo</td>
+								</tr>
+							</table>
+						</p>
+						<hr style="margin-bottom: 8px;" />
+						<table style="width: 100%; font-size: 12px;">
+							<tr>
+								<td style="font-weight: 600;">Total plan cost</td>
+								<td class="pricing-text" style="text-align: right;">$160/mo</td>
+							</tr>
+						</table>
+						<hr style="margin-top: 8px; margin-bottom: 15px;" />
+						<button class="btn btn-large btn-block" type="button" onclick="swapPlans();">Select this plan</button>
+						<span class="text-legal">Taxes and additional fees will be reflected on your next bill</span>
+					</div>
+				</div>
+			</form>
 		</div>
 	</section>
 	<footer>
@@ -84,6 +259,18 @@
 		</div>
 	</footer>
 </div>
-
-	</body>
+<script src="//www.att.com/styles/att/assets3.1.0/js/jquery.min.js" type="text/javascript"></script>
+<script src="//www.att.com/styles/att/assets3.1.0/js/global-sandbox.js" type="text/javascript"></script>
+<script src="//www.att.com/styles/att/assets3.1.0/js/mobileMenuShunt-1.0.js" type="text/javascript"></script>
+<script>
+	$('.toggle-header').click(function (event) {
+		var _id = $(this).attr('id').substr(3);
+		$('.toggle-header').css({'background-color': '#FFF'});
+		$('.recommended').css({'background-color': '#E8F0F4'});
+		$(this).css({'background-color': '#F2F2F2'});
+		$('div[role="tabpanel"]').css({'background-color': '#FFF'});
+		$('#panel'+ _id).css({'background-color': '#F2F2F2'});
+	});
+</script>
+</body>
 </html>
