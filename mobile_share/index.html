@@ -8,14 +8,14 @@
 		Untitled Document
 	</title>
 	<link href="//www.att.com/styles/att/assets3.1.0/css/sandbox-styles.css" rel="stylesheet" type="text/css" />
-	
+
 	<style type="text/css" media="screen">
 		.table-striped-vert tbody td:nth-of-type(even), .table-striped-vert thead th:nth-of-type(even) {
 			background-color: #E8F0F4;
 		}
 		.table-striped-vert td {
 			font-size: 16px;
-			text-align:center; 
+			text-align:center;
 			vertical-align:middle;
 			font-weight: 600;
 			padding: 10px;
@@ -23,7 +23,7 @@
 		.table-striped-vert th {
 			font-size: 14px;
 			font-weight: 400;
-			text-align:center; 
+			text-align:center;
 			vertical-align:middle;
 			padding: 15px;
 		}
@@ -55,16 +55,16 @@
 			</div>
 			<nav>
 				<div class="mine">tst01.stage.att.com</div>
-				<script type="text/javascript"> 
-				// variables needed by the mobile nav and mobile search 
+				<script type="text/javascript">
+				// variables needed by the mobile nav and mobile search
 				// Must point to prod before push.
-				//var mobileMenu_ecomName='tst01.stage.att.com', 
-				//mobileMenu_dssName='https://dssqa-m.stage.att.com', 
-				var mobileMenu_ecomName='m.att.com', 
-				mobileMenu_dssName='https://m.att.com', 
+				//var mobileMenu_ecomName='tst01.stage.att.com',
+				//mobileMenu_dssName='https://dssqa-m.stage.att.com',
+				var mobileMenu_ecomName='m.att.com',
+				mobileMenu_dssName='https://m.att.com',
 				// Choose which results to display. Leave blank for all results
-				searchSilo = "shop"; 
-				// To hide search change the g_hideSearch = true 
+				searchSilo = "shop";
+				// To hide search change the g_hideSearch = true
 				var g_hideSearch = false;
 			</script>
 			<div style="display: none;" class="dssLinkConfiguration">
@@ -81,7 +81,7 @@
 				</div> -->
 			</div>
 			<hr class="hr-large">
-			
+
 			<div class="content-pad">
 				Unite your devices with AT&T Mobile Share to share data between all your devices and enjoy unlimited talk & text
 			</div>
@@ -171,11 +171,11 @@
 						<p>Lorem ipsum dolor sit <a href="#">plurubous unem</a>. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. </p>
 					</div>
 
-					<h3 id="tab2" class="toggle-header accordion" aria-selected="false" aria-controls="panel2" aria-expanded="false" role="tab" tabindex="-1">
+					<h3 id="tab2" class="toggle-header accordion noworkee" aria-selected="false" aria-controls="panel2" aria-expanded="false" role="tab" tabindex="-1">
 						<i class="cssIcon-toggle-plus">collapsed</i>
 						1GB shared data<span class="price" style="padding-left: 60px;">$120.00/mo.</span>
 					</h3>
-					<div id="panel2" class="accordion" aria-labelledby="tab2" aria-hidden="true" role="tabpanel">
+					<div id="panelXX" class="accordion" aria-labelledby="tab2" aria-hidden="true" role="tabpanel">
 						<h2 tabindex="0">Lorem ipsum dolor sit</h2>
 						<p>Lorem ipsum dolor sit <a href="#">plurubous unem</a>. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. </p>
 					</div>
@@ -191,7 +191,7 @@
 
 					<h3 id="tab4" class="toggle-header accordion recommended" style="background-color: #E8F0F4;" aria-selected="false" aria-controls="panel4" aria-expanded="false" role="tab" tabindex="-1">
 						<i class="cssIcon-toggle-plus">collapsed</i>
-						
+
 						4GB shared data<sup style="position: absolute;left: 15px;top: 8px;font-size: 11px; color: #6a6a6a">Our recommended plan</sup><span class="price" style="padding-left: 60px;">$160.00/mo.</span>
 					</h3>
 					<div id="panel4" class="accordion" aria-labelledby="tab4" aria-hidden="false" role="tabpanel" style="background-color: #F2F2F2;">
@@ -285,7 +285,9 @@
 		var _id = $(this).attr('id').substr(3);
 		$('.toggle-header').css({'background-color': '#FFF'});
 		$('.recommended').css({'background-color': '#E8F0F4'});
-		$(this).css({'background-color': '#F2F2F2'});
+		if (!$(this).hasClass('noworkee')) {
+			$(this).css({'background-color': '#F2F2F2'});
+		}
 		$('div[role="tabpanel"]').css({'background-color': '#FFF'});
 		$('#panel'+ _id).css({'background-color': '#F2F2F2'});
 	});
