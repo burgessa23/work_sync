@@ -1,0 +1,22 @@
+<p>DUDE! This is the partial for view 2.</p>
+<p>
+	Showing of 'interpolate' filter:
+	{{ 'Current version is v%VERSION%.' | interpolate }}
+</p>
+
+<div ng-controller="MyCtrl2">
+	<app-m-data>
+</div>
+<form>
+  <input ng-model="qString" ng-controller="MyCtrl5">
+  <button ng-click="search(qString)">Search</button>
+</form>
+
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span10">
+    <!-- <show-venues ng-controller="MyCtrl3" foo="venues"></show-venues> -->
+    <show-results ng-controller="MyCtrl5"></show-results>
+		</div>
+	</div>
+</div>

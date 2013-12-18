@@ -1,0 +1,515 @@
+[
+
+	{
+
+		"id": "19",
+
+		"name": "The Gallery at West of Lenin",
+
+		"address": "203 N 36th St, Seattle, WA",
+
+		"lat": null,
+
+		"phone": "2063521777",
+
+		"website": "www.westoflenin.com",
+
+		"currentArtists": "62",
+
+		"hours": "Open during shows",
+
+		"venuePhoto": "www.westoflenin.com",
+
+		"isShowing": "1",
+
+		"isPremier": null,
+
+		"currentEventTitle": "LaRae Lobdell",
+
+		"deal": "",
+
+		"email": "liza@emutt.com"
+
+	},
+
+	{
+
+		"id": "20",
+
+		"name": "Asgard Tavern",
+
+		"address": "1300 N Northlake Way",
+
+		"lat": null,
+
+		"phone": "(206) 402-4704",
+
+		"website": "http://odinbrewing.wordpress.com/tasting-room/",
+
+		"currentArtists": "105",
+
+		"hours": "Mo-Thur: 3-10pm, Fri: 3-11pm, Sat: 12-11pm, Sun: 12-10pm",
+
+		"venuePhoto": "http://odinbrewing.files.wordpress.com/2013/06/943694_121252478082931_257664985_n.jpg",
+
+		"isShowing": "1",
+
+		"isPremier": null,
+
+		"currentEventTitle": "Fremont First Friday Art Walk with...",
+
+		"deal": "Special Beer Promo for all Art Walk Participants!",
+
+		"email": "k.peindl@sleipnirconsulting.com"
+
+	},
+
+	{
+
+		"id": "21",
+
+		"name": "ArtFX Gallery",
+
+		"address": "420 N. 35th St. Seattle, WA",
+
+		"lat": null,
+
+		"phone": "",
+
+		"website": "www.artfx.net",
+
+		"currentArtists": "51",
+
+		"hours": "Thursday - Sunday, 12pm - 5pm",
+
+		"venuePhoto": "",
+
+		"isShowing": "1",
+
+		"isPremier": null,
+
+		"currentEventTitle": "Mystic Tarot",
+
+		"deal": "",
+
+		"email": "artfxgallery@comcast.net"
+
+	},
+
+	{
+
+		"id": "23",
+
+		"name": "Fremont Health Club",
+
+		"address": "3601 Fremont Ave N. Seattle, WA",
+
+		"lat": null,
+
+		"phone": "206-632-2200",
+
+		"website": "http://www.fremonthc.com",
+
+		"currentArtists": "74",
+
+		"hours": "",
+
+		"venuePhoto": "",
+
+		"isShowing": "1",
+
+		"isPremier": null,
+
+		"currentEventTitle": "",
+
+		"deal": "",
+
+		"email": "danielle@fremonthc.com"
+
+	},
+
+	{
+
+		"id": "25",
+
+		"name": "PelMeni Dumpling Tzar",
+
+		"address": "3516 Fremont Pl N. Seattle, WA",
+
+		"lat": null,
+
+		"phone": "",
+
+		"website": "www.pelmenirestaurant.com",
+
+		"currentArtists": "71",
+
+		"hours": "11am-2:30am",
+
+		"venuePhoto": "",
+
+		"isShowing": "1",
+
+		"isPremier": null,
+
+		"currentEventTitle": " Art Walk",
+
+		"deal": "$1 off dumplings when you use the phrase ",
+
+		"email": "pelmeniseattle@gmail.com"
+
+	},
+
+	{
+
+		"id": "26",
+
+		"name": "Hub and Bespoke",
+
+		"address": "513 N. 36th St. Seattle, WA",
+
+		"lat": null,
+
+		"phone": "",
+
+		"website": "www.hubandbespoke.com",
+
+		"currentArtists": "46",
+
+		"hours": "",
+
+		"venuePhoto": "",
+
+		"isShowing": "1",
+
+		"isPremier": null,
+
+		"currentEventTitle": "",
+
+		"deal": "",
+
+		"email": "hubandbespoke@gmail.com"
+
+	},
+
+	{
+
+		"id": "27",
+
+		"name": "Fremont Jewelry Design",
+
+		"address": "3510 Fremont Place N. Seattle, WA",
+
+		"lat": null,
+
+		"phone": "",
+
+		"website": "www.fremontjewelrydesign.com",
+
+		"currentArtists": "73",
+
+		"hours": "Tues-Sat, 10-6",
+
+		"venuePhoto": "http://www.fremontjewelrydesign.com/interface/Logo.png",
+
+		"isShowing": "1",
+
+		"isPremier": null,
+
+		"currentEventTitle": "Sherri Bails - Beautiful watercolors with a touch of whimsy...",
+
+		"deal": "Free jewelry inspection/polishing/cleaning while you enjoy art & refreshments!",
+
+		"email": "lisa@fremontjewelrydesign.com"
+
+	},
+
+	{
+
+		"id": "28",
+
+		"name": "Space",
+
+		"address": "600 N 36th St. Seattle, WA",
+
+		"lat": null,
+
+		"phone": "",
+
+		"website": "http://www.fremontspace.com",
+
+		"currentArtists": "52,75",
+
+		"hours": "",
+
+		"venuePhoto": "",
+
+		"isShowing": "1",
+
+		"isPremier": null,
+
+		"currentEventTitle": "",
+
+		"deal": "",
+
+		"email": "natasha@realty.net"
+
+	},
+
+	{
+
+		"id": "29",
+
+		"name": "SATURN",
+
+		"address": "3417 Evanston Ave N. Seattle, WA",
+
+		"lat": null,
+
+		"phone": "",
+
+		"website": "http://www.saturnbuilding.com",
+
+		"currentArtists": "54,78,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,106",
+
+		"hours": "",
+
+		"venuePhoto": "",
+
+		"isShowing": "1",
+
+		"isPremier": null,
+
+		"currentEventTitle": "",
+
+		"deal": "",
+
+		"email": "natasha@realty.net"
+
+	},
+
+	{
+
+		"id": "30",
+
+		"name": "Portage Bay Goods",
+
+		"address": "621 N. 35th St. Seattle, WA",
+
+		"lat": null,
+
+		"phone": "(206)547-5221",
+
+		"website": "www.portagebaygoods.com",
+
+		"currentArtists": "59,108",
+
+		"hours": "10-7pm everyday. Open until 9pm on First Friday!",
+
+		"venuePhoto": "",
+
+		"isShowing": "1",
+
+		"isPremier": null,
+
+		"currentEventTitle": "",
+
+		"deal": "",
+
+		"email": "staff@portagebaygoods.com"
+
+	},
+
+	{
+
+		"id": "31",
+
+		"name": "Makerhaus",
+
+		"address": "122 NW 36th Street. Seattle, WA",
+
+		"lat": null,
+
+		"phone": "206-457-8968",
+
+		"website": "http://www.makerhaus.com/",
+
+		"currentArtists": "107",
+
+		"hours": "12:30pm-9:30pm",
+
+		"venuePhoto": "www.makerhaus.com",
+
+		"isShowing": "1",
+
+		"isPremier": null,
+
+		"currentEventTitle": " Light & Shadows Show",
+
+		"deal": "FREE",
+
+		"email": "ellie@makerhaus.com"
+
+	},
+
+	{
+
+		"id": "32",
+
+		"name": "Frame-Up Studios",
+
+		"address": "3515 Fremont Ave. N. Seattle, WA",
+
+		"lat": null,
+
+		"phone": "",
+
+		"website": "www.frameupstudios.com",
+
+		"currentArtists": "72",
+
+		"hours": "",
+
+		"venuePhoto": "",
+
+		"isShowing": "1",
+
+		"isPremier": null,
+
+		"currentEventTitle": "",
+
+		"deal": "",
+
+		"email": "frameupstudios@aol.com"
+
+	},
+
+	{
+
+		"id": "34",
+
+		"name": "evo Timesinfinity Gallery ",
+
+		"address": "3500 Stone Way N. Seattle, WA",
+
+		"lat": null,
+
+		"phone": "",
+
+		"website": "http://www.evo.com",
+
+		"currentArtists": "",
+
+		"hours": "6-9",
+
+		"venuePhoto": "",
+
+		"isShowing": "1",
+
+		"isPremier": null,
+
+		"currentEventTitle": "Steady",
+
+		"deal": "Free Skateboarding in our skate park from 7-9PM, 20% off Volcom clothing, 10% off all skateboard products and free limited prints. All brought to you by Volcom",
+
+		"email": "Cshalbot@evo.com"
+
+	},
+
+	{
+
+		"id": "36",
+
+		"name": "Bellefleur Lingerie",
+
+		"address": "3504 Fremont Place N. Seattle, WA",
+
+		"lat": null,
+
+		"phone": "206-545-0222",
+
+		"website": "http://www.bellefleurlingerie.com",
+
+		"currentArtists": "43,70",
+
+		"hours": "",
+
+		"venuePhoto": "",
+
+		"isShowing": "1",
+
+		"isPremier": null,
+
+		"currentEventTitle": "",
+
+		"deal": "",
+
+		"email": "ellen@bellefleurlingerie.com"
+
+	},
+
+	{
+
+		"id": "38",
+
+		"name": "Fremont Starbucks",
+
+		"address": "3415 Fremont Avenue N. Seattle, WA",
+
+		"lat": null,
+
+		"phone": "",
+
+		"website": "http://www.starbucks.com/",
+
+		"currentArtists": "",
+
+		"hours": "",
+
+		"venuePhoto": "",
+
+		"isShowing": "1",
+
+		"isPremier": null,
+
+		"currentEventTitle": "",
+
+		"deal": "",
+
+		"email": "S00370@retail.starbucks.com"
+
+	},
+
+	{
+
+		"id": "40",
+
+		"name": "Seattle Glass Monuments",
+
+		"address": "4365 6th Ave NW. Seattle, WA",
+
+		"lat": null,
+
+		"phone": "2067829001",
+
+		"website": "www.seattleglassmonuments.com/",
+
+		"currentArtists": "69",
+
+		"hours": "11am to 7pm",
+
+		"venuePhoto": "www.facebook/glassmonuments",
+
+		"isShowing": "1",
+
+		"isPremier": null,
+
+		"currentEventTitle": "SGM Holiday Gift Show",
+
+		"deal": "",
+
+		"email": "rebecca@seattleglassmonuments.com"
+
+	}
+
+]

@@ -1,0 +1,7 @@
+<ul class="phones">
+	<li ng-repeat="result in docs" class="thumbnail phone-listing">
+      <a href="{{result.productURL}}" class="thumb"><img ng-src="{{result.imageURL}}"></a>
+      <a href="{{result.productURL}}">{{result.displayName}}</a>
+      <p>{{result.description}}</p>
+    </li>
+</ul>
