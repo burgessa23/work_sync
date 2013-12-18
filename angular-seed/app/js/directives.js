@@ -41,10 +41,7 @@ myDirectives.directive('showResults', [
 	function() {
 		return {
 			restrict: 'E',
-			templateUrl: 'tpl/results.html',
-			link: function(scope, element, attrs) {
-				
-			}
+			templateUrl: 'tpl/results.html'
 		};
 	}
 ]);

@@ -47,8 +47,7 @@ serviceModule.factory('jsonpService', function($http) {
 serviceModule.factory('jsonSolrService', function($http) {
 	return {
 		get: function(qString) {
-			return $http.jsonp('http://tst20.stage.att.com/searchservice/Mobile/lucid?wt=json&rows=5&start=0&q=' + qString + '&fq=taxoFeatures:%224G%20HSPA%2B%22+OR+taxoOperatingSystem:%22Android%22&fq=showInSearch:%22true%22&fq=-stockDescription:%22N%22&fq=-navigationTree:%22Marked%20For%20Delete%22&echoParams=all&fl=*,elevated:[elevated]&facet=true&json.wrf=JSON_CALLBACK').then(function(result) {
-				console.log(result.data.response);
+			return $http.jsonp('http://www.att.com/searchservice/Mobile/lucid?wt=json&rows=5&start=0&q=' + qString + '&fq=-data_source_name:"GVP%20Video%20Feed"&fq=showInSearch:%22true%22&fq=-stockDescription:%22N%22&fq=-navigationTree:%22Marked%20For%20Delete%22&echoParams=all&fl=*,elevated:[elevated]&facet=true&json.wrf=JSON_CALLBACK').then(function(result) {
 				return result.data.response.docs;
 			});
 		}

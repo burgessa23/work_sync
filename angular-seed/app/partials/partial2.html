@@ -7,16 +7,20 @@
 <div ng-controller="MyCtrl2">
 	<app-m-data>
 </div>
-<form ng-controller="MyCtrl5">
-  <input ng-model="qString">
-  <button ng-click="searchBang(qString)">Search</button>
-</form>
 
-<div class="container-fluid">
-	<div class="row-fluid">
-		<div class="span10">
-    <!-- <show-venues ng-controller="MyCtrl3" foo="venues"></show-venues> -->
-    <show-results ng-controller="MyCtrl5"></show-results>
-		</div>
-	</div>
+
+
+<div ng-controller="MyCtrl5">
+    <form>
+      <input ng-model="qString">
+      <button ng-click="searchBang(qString)">Search</button>
+    </form>
+    
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span10">
+                <show-results></show-results>
+            </div>
+        </div>
+    </div>
 </div>

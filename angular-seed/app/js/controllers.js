@@ -39,11 +39,8 @@ myAppControllers.controller('MyCtrl4', ['$scope', 'venueService',
 myAppControllers.controller('MyCtrl5', ['$scope', 'jsonSolrService',
 	function($scope, jsonSolrService) {
 		$scope.searchBang = function(qString) {
-			console.log('qString = ' + qString);
 			jsonSolrService.get(qString).then(function(data) {
 				$scope.docs = data;
-				console.log($scope.docs);
-				//$scope.$apply();
 			});
 		};
 	}
