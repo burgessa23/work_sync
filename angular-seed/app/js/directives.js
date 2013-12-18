@@ -43,7 +43,7 @@ myDirectives.directive('showResults', [
 			restrict: 'E',
 			templateUrl: 'tpl/results.html',
 			link: function(scope, element, attrs) {
-
+				
 			}
 		};
 	}

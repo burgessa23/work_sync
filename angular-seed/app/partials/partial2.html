@@ -7,9 +7,9 @@
 <div ng-controller="MyCtrl2">
 	<app-m-data>
 </div>
-<form>
-  <input ng-model="qString" ng-controller="MyCtrl5">
-  <button ng-click="search(qString)">Search</button>
+<form ng-controller="MyCtrl5">
+  <input ng-model="qString">
+  <button ng-click="searchBang(qString)">Search</button>
 </form>
 
 <div class="container-fluid">
