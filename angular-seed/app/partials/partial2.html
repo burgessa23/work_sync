@@ -1,26 +1,31 @@
-<p>DUDE! This is the partial for view 2.</p>
-<p>
-	Showing of 'interpolate' filter:
-	{{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
-
-<div ng-controller="MyCtrl2">
-	<app-m-data>
-</div>
-
-
-
 <div ng-controller="MyCtrl5">
-    <form>
-      <input ng-model="qString">
-      <button ng-click="searchBang(qString)">Search</button>
-    </form>
-    
-    <div class="container-fluid">
-        <div class="row-fluid">
-            <div class="span10">
-                <show-results></show-results>
-            </div>
-        </div>
-    </div>
+	<a ng-click="searchBang(qString)" class="searchClick" style="text-indent: -999em;overflow: hidden;display: inline-block;">Tap to search</a>
+	<div id="resultsSearch" class="searchWidget">
+		<form class="searchForm" id="subSearch" ng-submit="searchBang(qString)">
+			<div id="inp_wrap" class="ui-input-search ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-icon-searchfield ui-body-c ui-focus">
+				<input ng-model="qString" title="search" role="combobox" aria-autocomplete="list" aria-owns="predicitonBucket" type="text" autocorrect="off" autocomplete="off" data-type="search" name="m_search" id="m_search" class="searchInput ui-input-text ui-body-c" placeholder="Search AT&amp;T">
+				<a href="#" id="clearSearchText" class="ui-input-clear ui-btn ui-btn-up-c ui-btn-icon-notext ui-btn-corner-all ui-shadow ui-input-clear-hidden" title="clear text" data-theme="c">
+					<span class="ui-btn-inner ui-btn-corner-all">
+						<span class="ui-btn-text">clear text</span>
+						<span class="ui-icon ui-icon-delete ui-icon-shadow"></span>
+					</span>
+				</a>
+			</div>
+			<div class="autoSearchVat">
+				<ul id="predicitonBucket" data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b" class="ui-listview ui-listview-inset ui-corner-all ui-shadow"></ul>
+			</div>
+		</form>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row-fluid section searchresults">
+			<div class="span10 dividerBefore" id="results">
+				<ul id="group_" class="searchResults shop ui-listview ui-listview-inset ui-corner-all ui-shadow" data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
+					<div ng-repeat="result in docs">
+						<content-item content="result"></content-item>
+					</div>
+				</ul>
+			</div>
+		</div>
+	</div>
 </div>

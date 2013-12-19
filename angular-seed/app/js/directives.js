@@ -58,43 +58,46 @@ myDirectives.directive('showResultsHello', [
 	}
 ]);
 
-myDirectives.directive('contentItem', function ($compile) {
-    var imageTemplate = '<div class="entry-photo"><h2>&nbsp;</h2><div class="entry-img"><span><a href="{{rootDirectory}}{{content.data}}"><img ng-src="{{rootDirectory}}{{content.data}}" alt="entry photo"></a></span></div><div class="entry-text"><div class="entry-title">{{content.title}}</div><div class="entry-copy">{{content.description}}</div></div></div>';
-    var videoTemplate = '<div class="entry-video"><h2>&nbsp;</h2><div class="entry-vid"><iframe ng-src="{{content.data}}" width="280" height="200" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div><div class="entry-text"><div class="entry-title">{{content.title}}</div><div class="entry-copy">{{content.description}}</div></div></div>';
-    var noteTemplate = '<div class="entry-note"><h2>&nbsp;</h2><div class="entry-text"><div class="entry-title">{{content.title}}</div><div class="entry-copy">{{content.data}}</div></div></div>';
+myDirectives.directive('contentItem', ['$compile', '$http', '$templateCache',
+	function($compile, $http, $templateCache) {
 
-    var getTemplate = function(contentType) {
-        var template = '';
+		var getTemplate = function(contentType) {
+			var templateLoader,
+				baseUrl = 'tpl/',
+				templateMap = {
+					'Catalog Feed': 'catalogItem.html',
+					'Ecare Feed': 'genericItem.html',
+					forums: 'genericItem.html',
+					'U-verse': 'genericItem.html',
+					myATT: 'myattItem.html'
+				};
 
-        switch(contentType) {
-            case 'image':
-                template = imageTemplate;
-                break;
-            case 'video':
-                template = videoTemplate;
-                break;
-            case 'notes':
-                template = noteTemplate;
-                break;
-        }
+			var templateUrl = baseUrl + templateMap[contentType];
+			templateLoader = $http.get(templateUrl, {
+				cache: $templateCache
+			});
 
-        return template;
-    }
+			return templateLoader;
 
-    var linker = function(scope, element, attrs) {
-        scope.rootDirectory = 'images/';
+		};
 
-        element.html(getTemplate(scope.content.content_type)).show();
+		var linker = function(scope, element, attrs) {
 
-        $compile(element.contents())(scope);
-    }
+			var loader = getTemplate(scope.content.data_source_name);
 
-    return {
-        restrict: "E",
-        rep1ace: true,
-        link: linker,
-        scope: {
-            content:'='
-        }
-    };
-});
+			var promise = loader.success(function(html) {
+				element.html(html);
+			}).then(function(response) {
+				element.replaceWith($compile(element.html())(scope));
+			});
+		};
+
+		return {
+			restrict: 'E',
+			scope: {
+				content: '='
+			},
+			link: linker
+		};
+	}
+]);

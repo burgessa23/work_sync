@@ -27,7 +27,7 @@ body {
 
 .phones li {
   clear: both;
-  height: 220px;
+  min-height: 220px;
   padding-top: 15px;
 }
 

@@ -1,0 +1,18 @@
+<li id="product01" data-feedcategory="shop" class="listVat ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-thumb ui-corner-bottom ui-btn-up-c" data-theme="c">
+	<div class="ui-btn-inner ui-li">
+		<div class="ui-btn-text">
+			<a id="product01Link" href="{{content.productURL}}" data-ajax="false" class="ui-link-inherit">
+			<img id="product01Image" ng-src="{{content.imageURL}}" alt="" class="ui-li-thumb ui-corner-bl">
+				<dt id="product01Title">
+					<span class="marketingCopy">Web Only</span>
+					<div class="productDisplayName">{{content.displayName}}</div>
+				</dt>
+				<dd id="product01Copy"> From <span id="product01Price" class="listPrice">${{content.price}}</span> <br><div class="starsCan">
+					<div id="product01Stars" data-feedcategory="shop" class="starsPercent" style="width:80%;"> </div>
+					<div class="starsRate"> </div> </div> <div id="product01Ratings" class="starsRating">{{content.noOfCustomerReviews}}</div>
+				</dd>
+			</a>
+		</div>
+		<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
+	</div>
+</li>

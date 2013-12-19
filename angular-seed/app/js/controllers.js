@@ -36,12 +36,15 @@ myAppControllers.controller('MyCtrl4', ['$scope', 'venueService',
 	}
 ]);
 
-myAppControllers.controller('MyCtrl5', ['$scope', 'jsonSolrService',
+myAppControllers.controller('MyCtrl5', ['$scope', 'jsonSolrService', 'autoSuggestService',
 	function($scope, jsonSolrService) {
 		$scope.searchBang = function(qString) {
 			jsonSolrService.get(qString).then(function(data) {
 				$scope.docs = data;
 			});
+		};
+		$scope.qString = function(argument) {
+			// body...
 		};
 	}
 ]);

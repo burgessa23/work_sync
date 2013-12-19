@@ -18,7 +18,7 @@ config(['$routeProvider',
 			templateUrl: 'partials/partial2.html'
 		});
 		$routeProvider.otherwise({
-			redirectTo: '/view1'
+			redirectTo: '/view2'
 		});
 	}
 ]);
