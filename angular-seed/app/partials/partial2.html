@@ -3,7 +3,7 @@
 	<div id="resultsSearch" class="searchWidget">
 		<form class="searchForm" id="subSearch" ng-submit="searchBang(qString)">
 			<div id="inp_wrap" class="ui-input-search ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-icon-searchfield ui-body-c ui-focus">
-				<input ng-model="qString" title="search" role="combobox" aria-autocomplete="list" aria-owns="predicitonBucket" type="text" autocorrect="off" autocomplete="off" data-type="search" name="m_search" id="m_search" class="searchInput ui-input-text ui-body-c" placeholder="Search AT&amp;T">
+				<input ng-model="qString" ng-change="getSuggestions(qString)" title="search" role="combobox" aria-autocomplete="list" aria-owns="predicitonBucket" type="text" autocorrect="off" autocomplete="off" data-type="search" name="m_search" id="m_search" class="searchInput ui-input-text ui-body-c" placeholder="Search AT&amp;T">
 				<a href="#" id="clearSearchText" class="ui-input-clear ui-btn ui-btn-up-c ui-btn-icon-notext ui-btn-corner-all ui-shadow ui-input-clear-hidden" title="clear text" data-theme="c">
 					<span class="ui-btn-inner ui-btn-corner-all">
 						<span class="ui-btn-text">clear text</span>
@@ -12,7 +12,16 @@
 				</a>
 			</div>
 			<div class="autoSearchVat">
-				<ul id="predicitonBucket" data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b" class="ui-listview ui-listview-inset ui-corner-all ui-shadow"></ul>
+				<ul id="predicitonBucket" data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+					<li ng-repeat="result in suggestions" role="option" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-corner-top ui-btn-up-c">
+						<div class="ui-btn-inner ui-li ui-corner-top">
+							<div class="ui-btn-text">
+								<a ng-click="searchBang(result.userQuery)" class="ui-link-inherit">{{result.userQuery}}</a>
+							</div>
+							<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
+						</div>
+					</li>
+				</ul>
 			</div>
 		</form>
 	</div>
