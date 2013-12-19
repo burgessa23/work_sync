@@ -3,6 +3,8 @@
       <a href="{{result.productURL}}" class="thumb"><img ng-src="{{result.imageURL}}"></a>
       <a href="{{result.productURL}}">{{result.displayName}}</a>
       <p>{{result.description}}</p>
+
+      <show-results-hello result-matrix="result" ng-if="result.productId==='prod7590243'"></show-results-hello>
     </li>
 </ul>
 <p>this is from the results directive</p>
