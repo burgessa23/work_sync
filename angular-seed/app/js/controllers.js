@@ -36,7 +36,7 @@ myAppControllers.controller('MyCtrl4', ['$scope', 'venueService',
 	}
 ]);
 
-myAppControllers.controller('MyCtrl5', ['$scope', 'jsonSolrService', 'autoSuggestService',
+myAppControllers.controller('SearchController', ['$scope', 'jsonSolrService', 'autoSuggestService',
 	function($scope, jsonSolrService, autoSuggestService) {
 		$scope.getSuggestions = function(qString) {
 			autoSuggestService.get($scope.qString).then(function(data) {
@@ -44,6 +44,8 @@ myAppControllers.controller('MyCtrl5', ['$scope', 'jsonSolrService', 'autoSugges
 			});
 		},
 		$scope.searchBang = function(qString) {
+			$scope.suggestions = '';
+			$scope.qString = qString;
 			jsonSolrService.get(qString).then(function(data) {
 				$scope.docs = data;
 			});
