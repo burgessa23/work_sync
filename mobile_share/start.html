@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.12), see www.w3.org" />
+	<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+	<title>
+		Untitled Document
+	</title>
+	<link href="//www.att.com/styles/att/assets3.1.0/css/sandbox-styles.css" rel="stylesheet" type="text/css" />
+
+	<style type="text/css" media="screen">
+		.table-striped-vert tbody td:nth-of-type(even), .table-striped-vert thead th:nth-of-type(even) {
+			background-color: #E8F0F4;
+		}
+		.table-striped-vert td {
+			font-size: 16px;
+			text-align:center;
+			vertical-align:middle;
+			font-weight: 600;
+			padding: 10px;
+		}
+		.table-striped-vert th {
+			font-size: 14px;
+			font-weight: 400;
+			text-align:center;
+			vertical-align:middle;
+			padding: 15px;
+		}
+		.labelType {
+			font-weight: 400;
+			font-size: 14px;
+		}
+		.toggle-header {
+			height: 50px;
+			line-height: 50px;
+		}
+	</style>
+	<script>
+		function swapPlans (panel) {
+			'use strict';
+			$('#originalTable').hide();
+			if (panel ===  5) {
+				$('#flowTable').show();	
+				$('#flowTable2').hide();
+			} else if (panel === 6) {
+				$('#flowTable2').show();
+				$('#flowTable').hide()
+			}
+			jQuery('html, body').animate({
+				scrollTop: $('body').offset().top
+			}, 250);
+		}
+	</script>
+</head>
+<body>
+	<div data-role="page" class="container">
+		<header class="row navbar globalNav component header" role="banner" data-role="header" data-backbtn="false">
+			<div class="headerBack"> </div>
+			<div class="navSpans clearfix">
+				<div id="logoHolder"> <a href="/" class="cssIcon-globe" data-transition="slide">at&amp;t home</a> </div>
+			</div>
+			<nav>
+				<div class="mine">tst01.stage.att.com</div>
+				<script type="text/javascript">
+				// variables needed by the mobile nav and mobile search
+				// Must point to prod before push.
+				//var mobileMenu_ecomName='tst01.stage.att.com',
+				//mobileMenu_dssName='https://dssqa-m.stage.att.com',
+				var mobileMenu_ecomName='m.att.com',
+				mobileMenu_dssName='https://m.att.com',
+				// Choose which results to display. Leave blank for all results
+				searchSilo = "shop";
+				// To hide search change the g_hideSearch = true
+				var g_hideSearch = false;
+			</script>
+			<div style="display: none;" class="dssLinkConfiguration">
+				<p id="dssEntryUrl">https://dssqa-m.stage.att.com/myatt/dss.action?refId=SANDBOX_BASED_SITE</p>
+			</div>
+		</nav>
+	</header>
+	<section class="row main-content">
+		<div class="span12">
+			<div class="page-header">
+				<h1>Upgrade your Family Talk plan</h1>
+				<!-- <div class="pull-right">
+					<p>{{Label:}} <a href="#">{{Link}}</a></p>
+				</div> -->
+			</div>
+			<hr class="hr-large">
+
+			<div class="content-pad">
+				Switch from your current Family Talk plan to a Mobile Share plan and all your phones and devices will benefit from
+			</div>
+			<div class="content-pad">
+				<ul class="bullet">
+				<li>Unlimited talk & text, no more overages!</li>
+					<li>Share 300MB to 50GB buckets of data with up to 10 devices.</li>
+					<li>Free Mobile Hotspot is included on all your capable devices.</li>
+					<li>Free access to AT&T Wi-Fi Hotspots</li>
+				</ul>
+			</div>
+			<div class="content-pad">
+				Select "Show Mobile Share plans" below to see how you can take advantage of this new plan, or "Continue to cart" to complete your current purchase.
+				<hr style="margin-top: 8px; margin-bottom: 15px;" />
+				<button class="btn btn-large btn-block" type="button" onclick="swapPlans(window.location='index.html');">Show Mobile Share plans</button>
+				<button class="btn btn-alt btn-large btn-block" type="button" onclick="alert('Plan added to cart');">Continue to cart</button>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div id="footerNav" data-role="navbar" data-theme="d" class="component">
+			<div class="ui-grid-b">
+				<div class="ui-block-a footerTab1">
+					<p> <a href="#">ATT.NET</a> </p>
+				</div>
+				<div class="ui-block-b footerTab2">
+					<p> <a href="#">BUSINESS</a> </p>
+				</div>
+				<div class="ui-block-c footerTab3">
+					<p> <a href="#">ABOUT AT&amp;T</a> </p>
+				</div>
+			</div>
+		</div>
+		<div id="footerBtm" class="component">
+			<ul>
+				<li><a href="//www.att.com/" data-ajax="false">FULL SITE</a></li>
+				<li><a href="//www.att.com/gen-mobile/privacy-policy?pid=2506" data-transition="slide">PRIVACY</a></li>
+				<li><a href="//www.att.com/gen-mobile/general?pid=11561" data-transition="slide">TERMS OF USE</a></li>
+			</ul>
+			<ul>
+				<li><a href="contact.m.html" data-transition="slide">CONTACT US</a></li>
+				<li><a href="//www.att.com/gen-mobile/privacy-policy?pid=2506" data-transition="slide">LEGAL</a></li>
+			</ul>
+			<p> <a href="//www.att.com/gen-mobile/privacy-policy?pid=2587">&copy; 2013 AT&amp;T Intellectual Property.</a> All rights reserved. </p>
+		</div>
+	</footer>
+</div>
+<script src="//www.att.com/styles/att/assets3.1.0/js/jquery.min.js" type="text/javascript"></script>
+<script src="//www.att.com/styles/att/assets3.1.0/js/global-sandbox.js" type="text/javascript"></script>
+<script src="//www.att.com/styles/att/assets3.1.0/js/mobileMenuShunt-1.0.js" type="text/javascript"></script>
+</body>
+</html>

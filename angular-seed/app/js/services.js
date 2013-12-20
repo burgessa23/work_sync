@@ -35,7 +35,6 @@ serviceModule.factory('jsonService', ['$resource',
 serviceModule.factory('jsonpService', function($http) {
 	return {
 		get: function() {
-			var self = this;
 			return $http.jsonp('http://www.achehorn.com/FAW/api.php/venues?callback=JSON_CALLBACK').then(function(result) {
 				console.log(result.data.venues);
 				return result.data.venues;

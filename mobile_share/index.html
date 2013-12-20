@@ -37,13 +37,20 @@
 		}
 	</style>
 	<script>
-	function swapPlans () {
-		$('#originalTable').hide();
-		$('#flowTable').show();
-		jQuery('html, body').animate({
-			scrollTop: $('body').offset().top
-		}, 250);
-	}
+		function swapPlans (panel) {
+			'use strict';
+			$('#originalTable').hide();
+			if (panel ===  5) {
+				$('#flowTable').show();	
+				$('#flowTable2').hide();
+			} else if (panel === 6) {
+				$('#flowTable2').show();
+				$('#flowTable').hide();
+			}
+			jQuery('html, body').animate({
+				scrollTop: $('body').offset().top
+			}, 250);
+		}
 	</script>
 </head>
 <body>
@@ -183,7 +190,7 @@
 					<button class="btn btn-alt btn-large btn-block" type="button">No, thank you</button>
 				</div>
 				<div class="span6">
-					<button class="btn btn-large btn-block" type="button">Select this plan</button>
+					<button class="btn btn-large btn-block" type="button" onclick="alert('Plan added to cart');">Select this plan</button>
 				</div>
 			</div>
 			<hr class="hr-small"/>
@@ -193,11 +200,11 @@
 			</div>
 			<form>
 				<div id="accordion1" class="tabpanel" role="tablist" multiselectable="false">
-					<h3 id="tab1" class="toggle-header accordion" aria-selected="false" aria-controls="panel1" aria-expanded="false" role="tab" tabindex="-1">
+					<h3 id="tab1" class="toggle-header accordion noworkee" aria-selected="false" aria-controls="panel1" aria-expanded="false" role="tab" tabindex="-1">
 						<i class="cssIcon-toggle-plus">collapsed</i>
 						300MB shared data<span class="price" style="padding-left: 40px;">$110.00/mo.</span>
 					</h3>
-					<div id="panel1" class="accordion" aria-labelledby="tab1" aria-hidden="true" role="tabpanel">
+					<div id="panelXX" class="accordion" aria-labelledby="tab1" aria-hidden="true" role="tabpanel">
 						<h2 tabindex="0">Lorem ipsum dolor sit</h2>
 						<p>Lorem ipsum dolor sit <a href="#">plurubous unem</a>. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. </p>
 					</div>
@@ -211,11 +218,11 @@
 						<p>Lorem ipsum dolor sit <a href="#">plurubous unem</a>. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. </p>
 					</div>
 
-					<h3 id="tab3" class="toggle-header accordion" aria-selected="false" aria-controls="panel3" aria-expanded="false" role="tab" tabindex="-1">
+					<h3 id="tab3" class="toggle-header accordion noworkee" aria-selected="false" aria-controls="panel3" aria-expanded="false" role="tab" tabindex="-1">
 						<i class="cssIcon-toggle-plus">collapsed</i>
 						2GB shared data<span class="price" style="padding-left: 60px;">$140.00/mo.</span>
 					</h3>
-					<div id="panel3" class="accordion" aria-labelledby="tab3" aria-hidden="true" role="tabpanel">
+					<div id="panelXX" class="accordion" aria-labelledby="tab3" aria-hidden="true" role="tabpanel">
 						<h2 tabindex="0">Lorem ipsum dolor sit</h2>
 						<p>Lorem ipsum dolor sit <a href="#">plurubous unem</a>. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. </p>
 					</div>
@@ -255,7 +262,7 @@
 							</tr>
 						</table>
 						<hr style="margin-top: 8px; margin-bottom: 15px;" />
-						<button class="btn btn-large btn-block" type="button" onclick="swapPlans();">Select this plan</button>
+						<button class="btn btn-large btn-block" type="button" onclick="swapPlans(5);">Select this plan</button>
 						<span class="text-legal">Taxes and additional fees will be reflected on your next bill</span>
 					</div>
 
@@ -263,16 +270,45 @@
 						<i class="cssIcon-toggle-plus">collapsed</i>
 						6GB shared data<span class="price" style="padding-left: 60px;">$180.00/mo.</span>
 					</h3>
-					<div id="panel5" class="accordion" aria-labelledby="tab5" aria-hidden="true" role="tabpanel">
-						<h2 tabindex="0">Lorem ipsum dolor sit</h2>
-						<p>Lorem ipsum dolor sit <a href="#">plurubous unem</a>. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. </p>
+					<div id="panel5" class="accordion" aria-labelledby="tab5" aria-hidden="false" role="tabpanel" style="background-color: #F2F2F2;">
+						<hr/>
+						<p>
+							<table style="width: 100%; font-size: 12px;">
+								<tr>
+									<td style="font-weight: 600;">6GB shared data</td>
+									<td class="pricing-text" style="text-align: right;">$90/mo</td>
+								</tr>
+								<tr>
+									<td>3 smartphone access fees @ $40/mo</td>
+									<td class="pricing-text" style="text-align: right;">$120/mo</td>
+								</tr>
+								<tr>
+									<td class="text-success">Off-contract device savings</td>
+									<td class="text-success" style="text-align: right;">-$15/mo</td>
+								</tr>
+								<tr>
+									<td class="text-success">AT&T Next device savings</td>
+									<td class="text-success" style="text-align: right;">-$15/mo</td>
+								</tr>
+							</table>
+						</p>
+						<hr style="margin-bottom: 8px;" />
+						<table style="width: 100%; font-size: 12px;">
+							<tr>
+								<td style="font-weight: 600;">Total plan cost</td>
+								<td class="pricing-text" style="text-align: right;">$160/mo</td>
+							</tr>
+						</table>
+						<hr style="margin-top: 8px; margin-bottom: 15px;" />
+						<button class="btn btn-large btn-block" type="button" onclick="swapPlans(6);">Select this plan</button>
+						<span class="text-legal">Taxes and additional fees will be reflected on your next bill</span>
 					</div>
 
-					<h3 id="tab6" class="toggle-header accordion" aria-selected="false" aria-controls="panel6" aria-expanded="false" role="tab" tabindex="-1">
+					<h3 id="tab6" class="toggle-header accordion noworkee" aria-selected="false" aria-controls="panel6" aria-expanded="false" role="tab" tabindex="-1">
 						<i class="cssIcon-toggle-plus">collapsed</i>
 						10GB shared data<span class="price" style="padding-left: 50px;">$210.00/mo.</span>
 					</h3>
-					<div id="panel6" class="accordion" aria-labelledby="tab6" aria-hidden="true" role="tabpanel">
+					<div id="panelXX" class="accordion" aria-labelledby="tab6" aria-hidden="true" role="tabpanel">
 						<h2 tabindex="0">Lorem ipsum dolor sit</h2>
 						<p>Lorem ipsum dolor sit <a href="#">plurubous unem</a>. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. </p>
 					</div>

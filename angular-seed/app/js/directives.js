@@ -29,9 +29,6 @@ myDirectives.directive('showVenues', [
 			templateUrl: 'tpl/venue.html',
 			scope: {
 				foo: '='
-			},
-			link: function(scope, element, attrs) {
-
 			}
 		};
 	}

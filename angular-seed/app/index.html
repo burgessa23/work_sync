@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="en" ng-app="myApp">
 <head>
-  <meta charset="utf-8">
-  <title>My AngularJS App</title>
-  <link href="//www.att.com/styles/att/assets3.1.0/css/sandbox-styles.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="http://m.att.com/shopcms/shopetc/designs/default.css">
-  <link rel="stylesheet" href="http://m.att.com/shopmobilecms/common/clientlib/clientlib.css">
-  <link rel="stylesheet" href="http://www.att.com/styles/sideMenu.m.css">
+	<meta charset="utf-8">
+	<title>My AngularJS App</title>
+	<link href="//www.att.com/styles/att/assets3.1.0/css/sandbox-styles.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="http://m.att.com/shopcms/shopetc/designs/default.css">
+	<link rel="stylesheet" href="http://m.att.com/shopmobilecms/common/clientlib/clientlib.css">
+	<link rel="stylesheet" href="http://www.att.com/styles/sideMenu.m.css">
 </head>
 <body>
-<div data-role="page" class="container">
+	<div data-role="page" class="container">
 		<header class="row navbar globalNav component header" role="banner" data-role="header" data-backbtn="false">
 			<div class="headerBack"> </div>
 			<div class="navSpans clearfix">
@@ -18,59 +18,53 @@
 			<nav>
 				<div class="mine">tst01.stage.att.com</div>
 				<script type="text/javascript">
-				// variables needed by the mobile nav and mobile search
-				// Must point to prod before push.
-				//var mobileMenu_ecomName='tst01.stage.att.com',
-				//mobileMenu_dssName='https://dssqa-m.stage.att.com',
-				var mobileMenu_ecomName='m.att.com',
-				mobileMenu_dssName='https://m.att.com',
-				// Choose which results to display. Leave blank for all results
-				searchSilo = "shop";
-				// To hide search change the g_hideSearch = true
-				var g_hideSearch = true;
-			</script>
-		</nav>
-	</header>
-	<section class="row main-content">
-  <div ng-view></div>
-  </section>
-	<footer>
-		<div id="footerNav" data-role="navbar" data-theme="d" class="component">
-			<div class="ui-grid-b">
-				<div class="ui-block-a footerTab1">
-					<p> <a href="#">ATT.NET</a> </p>
-				</div>
-				<div class="ui-block-b footerTab2">
-					<p> <a href="#">BUSINESS</a> </p>
-				</div>
-				<div class="ui-block-c footerTab3">
-					<p> <a href="#">ABOUT AT&amp;T</a> </p>
+					var mobileMenu_ecomName='m.att.com',
+					mobileMenu_dssName='https://m.att.com',
+					searchSilo = "shop";
+					var g_hideSearch = true;
+				</script>
+			</nav>
+		</header>
+		<section class="row main-content">
+			<div ng-view></div>
+		</section>
+		<footer>
+			<div id="footerNav" data-role="navbar" data-theme="d" class="component">
+				<div class="ui-grid-b">
+					<div class="ui-block-a footerTab1">
+						<p> <a href="#">ATT.NET</a> </p>
+					</div>
+					<div class="ui-block-b footerTab2">
+						<p> <a href="#">BUSINESS</a> </p>
+					</div>
+					<div class="ui-block-c footerTab3">
+						<p> <a href="#">ABOUT AT&amp;T</a> </p>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div id="footerBtm" class="component">
-			<ul>
-				<li><a href="//www.att.com/" data-ajax="false">FULL SITE</a></li>
-				<li><a href="//www.att.com/gen-mobile/privacy-policy?pid=2506" data-transition="slide">PRIVACY</a></li>
-				<li><a href="//www.att.com/gen-mobile/general?pid=11561" data-transition="slide">TERMS OF USE</a></li>
-			</ul>
-			<ul>
-				<li><a href="contact.m.html" data-transition="slide">CONTACT US</a></li>
-				<li><a href="//www.att.com/gen-mobile/privacy-policy?pid=2506" data-transition="slide">LEGAL</a></li>
-			</ul>
-			<p> <a href="//www.att.com/gen-mobile/privacy-policy?pid=2587">&copy; 2013 AT&amp;T Intellectual Property.</a> All rights reserved. </p>
-		</div>
-	</footer>
-</div>
-  <script src="lib/angular/angular.js"></script>
-  <script src="lib/angular/angular-route.js"></script>
-  <script src="lib/angular/angular-resource.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/directives.js"></script>
-  <script src="//www.att.com/styles/att/assets3.1.0/js/jquery.min.js" type="text/javascript"></script>
-<script src="//www.att.com/styles/att/assets3.1.0/js/global-sandbox.js" type="text/javascript"></script>
+			<div id="footerBtm" class="component">
+				<ul>
+					<li><a href="//www.att.com/" data-ajax="false">FULL SITE</a></li>
+					<li><a href="//www.att.com/gen-mobile/privacy-policy?pid=2506" data-transition="slide">PRIVACY</a></li>
+					<li><a href="//www.att.com/gen-mobile/general?pid=11561" data-transition="slide">TERMS OF USE</a></li>
+				</ul>
+				<ul>
+					<li><a href="contact.m.html" data-transition="slide">CONTACT US</a></li>
+					<li><a href="//www.att.com/gen-mobile/privacy-policy?pid=2506" data-transition="slide">LEGAL</a></li>
+				</ul>
+				<p> <a href="//www.att.com/gen-mobile/privacy-policy?pid=2587">&copy; 2013 AT&amp;T Intellectual Property.</a> All rights reserved. </p>
+			</div>
+		</footer>
+	</div>
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/angular/angular-route.js"></script>
+	<script src="lib/angular/angular-resource.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/services.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/filters.js"></script>
+	<script src="js/directives.js"></script>
+	<script src="//www.att.com/styles/att/assets3.1.0/js/jquery.min.js" type="text/javascript"></script>
+	<script src="//www.att.com/styles/att/assets3.1.0/js/global-sandbox.js" type="text/javascript"></script>
 </body>
 </html>

@@ -42,7 +42,7 @@ myAppControllers.controller('SearchController', ['$scope', 'jsonSolrService', 'a
 			autoSuggestService.get($scope.qString).then(function(data) {
 				$scope.suggestions = data;
 			});
-		},
+		};
 		$scope.getPrevious = function() {
 			var _prevSearches = localStorage.getItem("prevSearches").split('|');
 			var _prevSearchesFormatted = [],
@@ -53,7 +53,7 @@ myAppControllers.controller('SearchController', ['$scope', 'jsonSolrService', 'a
 				_prevSearchesFormatted.push(rv);
 			}
 			$scope.suggestions = _prevSearchesFormatted;
-		},
+		};
 		$scope.searchBang = function(qString) {
 			var previousSearchRack = localStorage.getItem('prevSearches'),
 				previousSearchValues,
@@ -61,7 +61,6 @@ myAppControllers.controller('SearchController', ['$scope', 'jsonSolrService', 'a
 				searchTerm;
 			$scope.suggestions = '';
 			$scope.qString = qString;
-
 			searchTerm = qString;
 			if (previousSearchRack !== null) {
 				previousSearchRack = previousSearchRack.toLowerCase();
