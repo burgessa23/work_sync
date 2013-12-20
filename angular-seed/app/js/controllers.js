@@ -43,9 +43,40 @@ myAppControllers.controller('SearchController', ['$scope', 'jsonSolrService', 'a
 				$scope.suggestions = data;
 			});
 		},
+		$scope.getPrevious = function() {
+			var _prevSearches = localStorage.getItem("prevSearches").split('|');
+			var _prevSearchesFormatted = [],
+				rv;
+			for (var i = 0; i < _prevSearches.length; ++i) {
+				rv = {};
+				rv['userQuery'] = _prevSearches[i];
+				_prevSearchesFormatted.push(rv);
+			}
+			$scope.suggestions = _prevSearchesFormatted;
+		},
 		$scope.searchBang = function(qString) {
+			var previousSearchRack = localStorage.getItem('prevSearches'),
+				previousSearchValues,
+				m_rack,
+				searchTerm;
 			$scope.suggestions = '';
 			$scope.qString = qString;
+
+			searchTerm = qString;
+			if (previousSearchRack !== null) {
+				previousSearchRack = previousSearchRack.toLowerCase();
+				if (previousSearchRack.indexOf(searchTerm.toLowerCase()) === -1) {
+					previousSearchValues = localStorage.getItem("prevSearches").split('|');
+					previousSearchValues.unshift(searchTerm);
+					if (previousSearchValues.length > 5) {
+						previousSearchValues.pop();
+					}
+					m_rack = previousSearchValues.join('|');
+					localStorage.setItem("prevSearches", m_rack);
+				}
+			} else {
+				localStorage.setItem("prevSearches", searchTerm);
+			}
 			jsonSolrService.get(qString).then(function(data) {
 				$scope.docs = data;
 			});
