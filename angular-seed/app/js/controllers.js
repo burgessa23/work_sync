@@ -44,6 +44,7 @@ myAppControllers.controller('SearchController', ['$scope', 'jsonSolrService', 'a
 			});
 		};
 		$scope.getPrevious = function() {
+			// convert the pipe delimited string into a json object
 			var _prevSearches = localStorage.getItem("prevSearches").split('|');
 			var _prevSearchesFormatted = [],
 				rv;
@@ -52,13 +53,16 @@ myAppControllers.controller('SearchController', ['$scope', 'jsonSolrService', 'a
 				rv['userQuery'] = _prevSearches[i];
 				_prevSearchesFormatted.push(rv);
 			}
+			// set to the expected $scope parameter
 			$scope.suggestions = _prevSearchesFormatted;
 		};
 		$scope.searchBang = function(qString) {
+			// store the search string
 			var previousSearchRack = localStorage.getItem('prevSearches'),
 				previousSearchValues,
 				m_rack,
 				searchTerm;
+			// empty the suggestions scope
 			$scope.suggestions = '';
 			$scope.qString = qString;
 			searchTerm = qString;
@@ -76,9 +80,13 @@ myAppControllers.controller('SearchController', ['$scope', 'jsonSolrService', 'a
 			} else {
 				localStorage.setItem("prevSearches", searchTerm);
 			}
+			// query for results
 			jsonSolrService.get(qString).then(function(data) {
 				$scope.docs = data;
 			});
+		};
+		$scope.flushSuggestions = function () {
+			$scope.suggestions = '';
 		};
 	}
 ]);
