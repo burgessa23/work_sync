@@ -5,7 +5,7 @@
 	<meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.12), see www.w3.org" />
 	<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 	<title>
-		Untitled Document
+		Compare your plan to Mobile Share
 	</title>
 	<link href="//www.att.com/styles/att/assets3.1.0/css/sandbox-styles.css" rel="stylesheet" type="text/css" />
 
@@ -41,11 +41,13 @@
 			'use strict';
 			$('#originalTable').hide();
 			if (panel ===  5) {
-				$('#flowTable').show();	
+				$('#flowTable').show();
 				$('#flowTable2').hide();
+				$('#yearlySavings').html("$288/year");
 			} else if (panel === 6) {
 				$('#flowTable2').show();
 				$('#flowTable').hide();
+				$('#yearlySavings').html("$48/year");
 			}
 			jQuery('html, body').animate({
 				scrollTop: $('body').offset().top
@@ -79,10 +81,11 @@
 			</div>
 		</nav>
 	</header>
+	<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
 	<section class="row main-content">
 		<div class="span12">
 			<div class="page-header">
-				<h1>Optimize your plan</h1>
+				<h1>Compare your plan to Mobile Share</h1>
 				<!-- <div class="pull-right">
 					<p>{{Label:}} <a href="#">{{Link}}</a></p>
 				</div> -->
@@ -90,7 +93,7 @@
 			<hr class="hr-large">
 
 			<div class="content-pad">
-				Unite your devices with AT&T Mobile Share to share data between all your devices and enjoy unlimited talk & text
+				Compare your 3/mo. average usage to a new Mobile Share plan. Upgrade to the recommended Mobile Share plan, or select a different shared data bucket from the list below to compare with. Select here for <a href="_ajax-modal-content.html" id="myModalLabel" role="button" data-backdrop="true" data-toggle="modal" data-target="#myModal">more information on AT&T Mobile Share</a>
 			</div>
 			<table class="table table-striped-vert table-bordered" id="originalTable">
 				<thead>
@@ -100,6 +103,10 @@
 					</tr>
 				</thead>
 				<tbody>
+					<tr>
+						<td>Family Talk 1400</td>
+						<td>Mobile Share 4GB</td>
+					</tr>
 					<tr>
 						<td>3.74 <span class="labelType">GB</span></td>
 						<td>4 <span class="labelType">GB</span></td>
@@ -131,6 +138,10 @@
 				</thead>
 				<tbody>
 					<tr>
+						<td>Family Talk 1400</td>
+						<td>Mobile Share 4GB</td>
+					</tr>
+					<tr>
 						<td>3.74 <span class="labelType">GB</span></td>
 						<td>4 <span class="labelType">GB</span></td>
 					</tr>
@@ -161,6 +172,10 @@
 				</thead>
 				<tbody>
 					<tr>
+						<td>Family Talk 1400</td>
+						<td>Mobile Share 6GB</td>
+					</tr>
+					<tr>
 						<td>3.74 <span class="labelType">GB</span></td>
 						<td>6 <span class="labelType">GB</span></td>
 					</tr>
@@ -182,21 +197,20 @@
 					</tr>
 				</tbody>
 			</table>
-			<div id="flowsavings1" class="content-pad" style="text-align: center;font-size: 13px;">Save <span class="price">$288/year</span> with this plan</div>
-			<div id="flowsavings2" class="content-pad" style="text-align: center;font-size: 13px;">Save <span class="price">$48/year</span> with this plan</div>
+			<div id="flowsavings1" class="content-pad" style="text-align: center;font-size: 13px;">Save <span class="price" id="yearlySavings">$288/year</span> with this plan</div>
+			<div id="flowsavings2" class="content-pad" style="text-align: center;font-size: 13px; display:none;">Save <span class="price">$48/year</span> with this plan</div>
 			<hr/>
 			<div class="row-fluid-nowrap content-pad">
 				<div class="span6">
-					<button class="btn btn-alt btn-large btn-block" type="button">No, thank you</button>
+					<button class="btn btn-alt btn-large btn-block" type="button">Continue to cart</button>
 				</div>
 				<div class="span6">
-					<button class="btn btn-large btn-block" type="button" onclick="alert('Plan added to cart');">Select this plan</button>
+					<button class="btn btn-shop btn-large btn-block" type="button" onclick="alert('Plan added to cart');">Upgrade to this plan</button>
 				</div>
 			</div>
 			<hr class="hr-small"/>
 			<div class="content-pad">
-				<span style="font-size: 16px">Explore all Mobile Share plans</span><br/><br/>
-				Each plan has unlimited Talk & Text. Prices are based on your current devices and services.
+				Select a shared data bucket below to compare against your 3/mo. average usage
 			</div>
 			<form>
 				<div id="accordion1" class="tabpanel" role="tablist" multiselectable="false">
@@ -230,7 +244,7 @@
 					<h3 id="tab4" class="toggle-header accordion recommended" style="background-color: #E8F0F4;" aria-selected="false" aria-controls="panel4" aria-expanded="false" role="tab" tabindex="-1">
 						<i class="cssIcon-toggle-plus">collapsed</i>
 
-						4GB shared data<sup style="position: absolute;left: 15px;top: 8px;font-size: 11px; color: #6a6a6a">Our recommended plan</sup><span class="price" style="padding-left: 60px;">$160.00/mo.</span>
+						4GB shared data<sup style="position: absolute;left: 15px;top: 8px;font-size: 11px; color: #6a6a6a">Recommendation based on your usage</sup><span class="price" style="padding-left: 60px;">$160.00/mo.</span>
 					</h3>
 					<div id="panel4" class="accordion" aria-labelledby="tab4" aria-hidden="false" role="tabpanel" style="background-color: #F2F2F2;">
 						<hr/>
@@ -262,8 +276,7 @@
 							</tr>
 						</table>
 						<hr style="margin-top: 8px; margin-bottom: 15px;" />
-						<button class="btn btn-large btn-block" type="button" onclick="swapPlans(5);">Select this plan</button>
-						<span class="text-legal">Taxes and additional fees will be reflected on your next bill</span>
+						<button class="btn btn-large btn-block" type="button" onclick="swapPlans(5);">Compare to my plan</button>
 					</div>
 
 					<h3 id="tab5" class="toggle-header accordion" aria-selected="false" aria-controls="panel5" aria-expanded="false" role="tab" tabindex="-1">
@@ -296,12 +309,11 @@
 						<table style="width: 100%; font-size: 12px;">
 							<tr>
 								<td style="font-weight: 600;">Total plan cost</td>
-								<td class="pricing-text" style="text-align: right;">$160/mo</td>
+								<td class="pricing-text" style="text-align: right;">$180/mo</td>
 							</tr>
 						</table>
 						<hr style="margin-top: 8px; margin-bottom: 15px;" />
-						<button class="btn btn-large btn-block" type="button" onclick="swapPlans(6);">Select this plan</button>
-						<span class="text-legal">Taxes and additional fees will be reflected on your next bill</span>
+						<button class="btn btn-large btn-block" type="button" onclick="swapPlans(6);">Compare to my plan</button>
 					</div>
 
 					<h3 id="tab6" class="toggle-header accordion noworkee" aria-selected="false" aria-controls="panel6" aria-expanded="false" role="tab" tabindex="-1">
