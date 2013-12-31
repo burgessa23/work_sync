@@ -55,6 +55,15 @@ myDirectives.directive('showResultsHello', [
 	}
 ]);
 
+myDirectives.directive('searchWidgetUi', [
+	function() {
+		return {
+			restrict: 'E',
+			templateUrl: 'tpl/searchWidget.html'
+		};
+	}
+]);
+
 myDirectives.directive('contentItem', ['$compile', '$http', '$templateCache',
 	function($compile, $http, $templateCache) {
 
