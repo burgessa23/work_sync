@@ -3,46 +3,15 @@
 /* Controllers */
 
 var myAppControllers = angular.module('myApp.controllers', []);
-
-myAppControllers.controller('MyCtrl1', ['$scope',
-	function($scope) {
-		$scope.foo = {
-			bat: "test message 1",
-			baz: "99"
-		};
-		$scope.crux = "this is ctrl1, it gets its data from the controller";
-
-	}
-]);
-
-myAppControllers.controller('MyCtrl2', ['$scope', 'dataService',
-	function($scope, foo) {
-		$scope.crux = 'this is ctrl2, it gets its data from a service';
-		$scope.foo = foo;
-	}
-]);
-
-myAppControllers.controller('MyCtrl3', ['$scope', 'jsonpService',
-	function($scope, jsonpService) {
-		jsonpService.get().then(function(data) {
-			$scope.venues = data;
-		});
-	}
-]);
-
-myAppControllers.controller('MyCtrl4', ['$scope', 'venueService',
-	function($scope, venueService) {
-		$scope.venues = venueService.query();
-	}
-]);
-
 myAppControllers.controller('SearchController', ['$scope', 'jsonSolrService', 'autoSuggestService',
 	function($scope, jsonSolrService, autoSuggestService) {
+		// get typeahead suggestions
 		$scope.getSuggestions = function(qString) {
 			autoSuggestService.get($scope.qString).then(function(data) {
 				$scope.suggestions = data;
 			});
 		};
+		// load last 5 searches from localStorage
 		$scope.getPrevious = function() {
 			// convert the pipe delimited string into a json object
 			var _prevSearches = localStorage.getItem("prevSearches").split('|');
@@ -56,14 +25,14 @@ myAppControllers.controller('SearchController', ['$scope', 'jsonSolrService', 'a
 			// set to the expected $scope parameter
 			$scope.suggestions = _prevSearchesFormatted;
 		};
+		// user taps search icon or hits enter
 		$scope.searchBang = function(qString) {
 			// store the search string
 			var previousSearchRack = localStorage.getItem('prevSearches'),
 				previousSearchValues,
 				m_rack,
 				searchTerm;
-			// empty the suggestions scope
-			$scope.suggestions = '';
+			this.flushSuggestions();
 			$scope.qString = qString;
 			searchTerm = qString;
 			if (previousSearchRack !== null) {
@@ -80,11 +49,12 @@ myAppControllers.controller('SearchController', ['$scope', 'jsonSolrService', 'a
 			} else {
 				localStorage.setItem("prevSearches", searchTerm);
 			}
-			// query for results
+			// query for results only when form is submitted or user hits search icon
 			jsonSolrService.get(qString).then(function(data) {
 				$scope.docs = data;
 			});
 		};
+		// empty the suggestions scope
 		$scope.flushSuggestions = function () {
 			$scope.suggestions = '';
 		};
